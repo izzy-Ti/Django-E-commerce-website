@@ -1,0 +1,93 @@
+body{
+    background-color: rgb(123, 123, 123);
+    background-image: url("../images/OIP.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+}
+body h1{
+    font-size: 7rem;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+body h1 span{
+    color: aquamarine;
+}
+body h3{
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+}
+body p{
+    position: relative;
+    top:-1000px;
+    font-size: 1.5rem;
+    color: white;
+    margin: 10px 300px;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+body p.active{
+    top: 0;
+}
+body button{
+    margin: 20px 0;
+    color: white;
+    position: relative;
+    border:3px solid;
+    border-color: white;
+    background-color: transparent;
+    padding: 20px 20px;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    left: 45%;
+    font-size: 2rem;
+    transition: all 0.35s ease;
+}
+body button:hover{
+    border-color: aquamarine;
+    color: aquamarine;
+}
+body .media{
+    padding: 20px 30px;
+}
+body .media h1{
+    color: rgb(255, 255, 255);
+    font-size: 5rem;
+    font-family: inherit;
+    text-align: center;
+    text-shadow: 3px 3px 3px rgb(0, 0, 0);
+
+}
+body .media h3{
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-family: inherit;
+    text-align: center;
+    text-shadow: 3px 3px 3px rgb(0, 0, 0);
+}
+body .media {
+    display: block;
+}
+body .media .icons a {
+    color: aliceblue;
+    font-size: 3rem;
+    margin: 15px 0;
+    position: relative;
+    left: 38%;
+    transition: all 0.35s ease;
+}
+body .media .icons a i{
+    padding:20px 20px;
+}
+body .media .icons a:hover{
+    color: aquamarine ;
+    font-size: 3rem;
+    margin: 15px 0;
+    position: relative;
+    left: 38%;
+}

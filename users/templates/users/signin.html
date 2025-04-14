@@ -1,0 +1,57 @@
+{% extends 'layout.html'%}
+{% load static%}
+{% block title%}signup__page{%endblock%}
+{%block css%}
+    <link rel="stylesheet" href="{% static 'css/users.css'%}">
+{%endblock%}
+{%block content%}
+    <form method="POST">
+
+        {% csrf_token %}
+      
+      <div class="form_items">
+      <h1>Signup here</h1>
+        {%if messages%}
+            {% for message in messages%}
+                {% if message.tags == 'error' %}
+                    <h4 class="error">{{message}}</h4>
+                {% else%}
+                    <h4 class="success">{{message}}</h4>
+                {%endif%}
+            {% endfor%}
+        {% endif%}
+        <div class="txt_field">
+          <label>First Name</label>
+          <input type="text" required name="first_name" >
+        </div>
+    
+        <div class="txt_field">
+          <label>Last Name</label>
+          <input type="text" required name="last_name" >
+        </div>
+    
+        <div class="txt_field">
+          <label>Username</label>
+          <input type="text" required name="username">
+        </div>
+    
+        <div class="txt_field">
+          <label>Email address</label>
+          <input type="email" required name="email">
+        </div>
+    
+        <div class="txt_field">
+          <label>Password</label>
+          <input type="password" required name="password" >
+        </div>    
+    
+        <!-- <div class="pass">Forgot Password?</div> -->
+        <input type="submit" value="Register" class="submit">
+        <div class="signup_link">
+          Already have an account? <a href="{% url 'users:login' %}">Login</a>
+        </div>
+      </div>
+      </form>
+
+{% endblock%}
+    

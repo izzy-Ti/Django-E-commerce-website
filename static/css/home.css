@@ -1,0 +1,87 @@
+
+body .contents{ 
+    top:20%;
+    background-color: black;
+    background-image: url("../images/black_girl_with_red_lipstick_in_black_background_hd_black_girl-1366x768.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+}
+.hero__content{
+    top:50%;
+    position: absolute;
+    text-align: center;
+    margin: 0 20px;
+    padding: 15px 10px;
+}
+.hero__content h5{
+    color:gray;
+    font-weight: lighter;
+    font-size: 2rem;
+}
+.hero__content h1{
+    font-size: 6rem;
+    color: rgb(1, 169, 155);
+    font-weight: bold;
+}
+.hero__content h1 span{
+    color: red;
+    font-size: 7rem;
+}
+.button_one a{
+    text-decoration: none;
+    color:black;
+    font-size: 3rem;
+    padding:30px 30px;
+    font-family: cursive;
+    z-index: 999;
+}
+.hero__content .button_two a{ 
+    text-decoration: none;
+    color:aliceblue;
+    font-size: 3rem;
+    padding:30px 30px;
+    font-family: cursive;
+    z-index: 999;
+    transition: all 0.35s ease;
+}
+.hero__content .button_one{
+    background-color: rgb(1, 169, 155);
+    border-radius: 5px;
+    border: none;
+    position: relative;
+    margin: 20px 20px;
+    padding: 20px 20px;
+    transition: all 0.35s ease;
+}
+.hero__content .button_two{
+    border:5px solid;
+    border-color: rgb(1, 169, 155);
+    background-color: transparent;
+    border-radius: 5px;
+    position: relative;
+    margin: 20px 20px;
+    padding: 20px 20px;
+    transition: all 0.35s ease;
+}
+.button_one a:hover{
+    color: white;
+}
+.button_two a:hover{
+    color: black;
+}
+.button_one:hover{
+    background-color: rgb(32, 32, 32);
+    border:5px solid;
+    border-color: rgb(1, 169, 155);
+}
+.button_two:hover{
+    background-color: rgb(1, 169, 155);
+    color: black;
+}
+.hero__content h3{
+    font-size: 4rem;
+    color: white;
+}          

@@ -1,0 +1,22 @@
+{% extends 'layout.html'%}
+{% load static%}
+{% block title%}home{%endblock%}
+{%block css%}
+    <link rel="stylesheet" href="{% static 'css/home.css'%}">
+{%endblock%}
+{%block cart%}
+    {%if user_aut == false %}
+        <li class="navbar__item"><a href="/login" ><i class="fa-solid fa-cart-shopping"></i></a></li>
+    {%else%}
+    <li class="navbar__item" id="log_button"><a href="{% url 'users:login'%}">Login</a></li>
+    {%endif%}
+{%endblock%}
+{%block content%}
+<div class="hero__content">
+    <h5>Trade-with-70%-off</h5>
+    <h1>Welcome to <span>E-low</span></h1>
+    <h3>Get your fashion here</h3>
+    <button class='button_one'><a href="{% url 'users:login'%}">Get started</a></button>
+    <button class='button_two'><a href="{% url 'about'%}">About us</a></button>
+</div>
+{% endblock%}

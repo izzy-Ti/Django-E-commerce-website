@@ -1,0 +1,66 @@
+body { 
+    background-color: black;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+body .items{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+body h1{
+    margin: 10px; 
+    text-align: center;
+    font-size: 5rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: gray;
+}
+body .posts{
+    margin: 10px 0;
+    max-width: 300px;
+    background-color: rgb(45, 45, 45);
+    border-radius: 7px;
+    padding: 10px 10px;
+}
+body .posts .disc{
+    text-align: center;
+    color: white;
+    font-weight: lighter;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+}
+body .posts .items{
+    margin: 15px 15px;
+}
+body .price{
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin: 10px 10px;
+} 
+body .buttons{
+    display: flex;
+    justify-content: space-between;
+}
+body button{
+    background-color: transparent;
+    border: 1px solid;
+    border-color: white;
+    border-radius: 50px;
+    padding: 15px 5px;
+
+}
+body button:hover{
+    background-color: rgb(1, 169, 155);
+    border: none;
+}
+body button a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 20px 20px;
+    font-weight: lighter;
+}

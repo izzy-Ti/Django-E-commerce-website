@@ -1,0 +1,38 @@
+{% extends 'layout.html'%}
+{% load static%}
+{% block title%}about{%endblock%}
+{%block css%}
+    <link rel="stylesheet" href="{% static 'css/about.css'%}">
+{%endblock%}
+{%block cart%}
+    {%if user_aut == False %}
+        <li class="navbar__item"><a href="/login" ><i class="fa-solid fa-cart-shopping"></i></a></li>
+    {%else%}
+    <li class="navbar__item" id="log_button"><a href="{% url 'users:login'%}">Login</a></li>
+    {%endif%}
+{%endblock%}
+{%block content%}
+    <h1>We are <span>E-Low</span></h1>
+    <h3>where fashion meets confidence.</h3>
+    <p id="text">Founded with the vision to offer high-quality,
+        trend-forward pieces at accessible prices, E-low brings together a wide selection of urban,
+        chic, and modern styles for those who dare to stand out. From everyday essentials to standout statement pieces,
+        our collections are designed to inspire confidence in every step.
+        Whether you're refreshing your wardrobe, dressing for an occasion, or just discovering your next favorite outfit 
+        — we’re here to make your shopping experience smooth, fun, and inspiring.
+        </p>
+    <button id='button'>Know more</button>
+        <div class="media">
+            <h1>Find us here</h1>
+            <h3>We can help you 24/7</h3>
+            <div class="icons">
+                <a href=""><i class="fa-brands fa-telegram"></i></a> 
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+{% endblock%}
+{%block js%}
+<script src="{% static 'js/about.js'%}"></script>
+{% endblock %}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title%}
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/navbar.css'%}">
+    {%block css%}
+    {%endblock%}
+</head>
+<body>
+    <!--navbar-->
+    <nav class="navbar">
+        <div class="navbar__elements">
+            <div class="logo"><a href="{% url 'home'%}" class="navbar__logo">E-Low</a></div>
+            <div class="navbar__toggel">
+                <div class="navbar__toggel--line"></div>
+                <div class="navbar__toggel--line"></div>
+                <div class="navbar__toggel--line"></div>
+            </div>
+        </div>
+        <div class="navbar__menu">
+            <ul class="navbar__list">
+                <li class="navbar__item"><a href="{% url 'home'%}" >Home</a></li>
+                <li class="navbar__item"><a href="{% url 'products:products_front'%}" >Products</a></li>
+                <li class="navbar__item"><a href="{% url 'about'%}" >About</a></li>
+                <li class="navbar__item"><a href="/contact" >Profile</a></li>
+                {% block cart%}
+                <li class="navbar__item"><a href="/login" ><i class="fa-solid fa-cart-shopping"></i></a></li>
+                {% endblock%}
+            </ul>   
+        </div>
+</nav>
+<!--end of navbar-->
+<div class="contents">
+    {% block content%}
+    
+
+    {% endblock %}
+</div>
+{% block js%}
+{% endblock%}
+<script src="https://kit.fontawesome.com/b50902bacd.js" crossorigin="anonymous"></script>
+</body>
+</html>

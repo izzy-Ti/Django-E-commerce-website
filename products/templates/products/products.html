@@ -1,0 +1,30 @@
+{% extends 'layout.html'%}
+{% load static%}
+{% block title%}products{%endblock%}
+{%block css%}
+    <link rel="stylesheet" href="{% static 'css/products.css'%}">
+{%endblock%}
+{%block cart%}
+    {%if user_aut == True %}
+        <li class="navbar__item"><a href="/login" ><i class="fa-solid fa-cart-shopping"></i></a></li>
+    {%else%}
+    <li class="navbar__item" id="log_button"><a href="{% url 'users:login'%}">Login</a></li>
+    {%endif%}
+{%endblock%}
+<div class="products__content">
+{%block content%}
+<h1>Featured products</h1>
+<div class="items">
+{% for post in posts%}
+    <div class="posts">
+        <div class="item__content">
+        <img src="{{post.banner.url}}" height="400">
+        <p class="disc">{{post.discription}}</p>
+        <p class="price">{{post.price}}</p>
+        <div class="buttons"><button><a href="">Add to cart <i class="fa-solid fa-cart-shopping"></i></a></button><button><a href="">Buy now</a></button></div>
+        </div>
+    </div>
+{%  endfor %}
+</div>
+{% endblock%}
+</div>

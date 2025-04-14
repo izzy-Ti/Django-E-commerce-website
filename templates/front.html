@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title%}
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/navbar.css'%}">
+    <link rel="stylesheet" href="{% static 'css/home.css'%}">
+
+    {%block css%}
+    {%endblock%}
+</head>
+<body>
+    <!--navbar-->
+    <nav class="navbar">
+        <div class="navbar__elements">
+            <div class="logo"><a href="{% url 'home'%}" class="navbar__logo">E-Low</a></div>
+            <div class="navbar__toggel">
+                <div class="navbar__toggel--line"></div>
+                <div class="navbar__toggel--line"></div>
+                <div class="navbar__toggel--line"></div>
+            </div>
+        </div>
+        <div class="navbar__menu">
+            <ul class="navbar__list">
+                <li class="navbar__item"><a href="/" >Home</a></li>
+                <li class="navbar__item"><a href="{% url 'products:products_front'%}" >Products</a></li>
+                <li class="navbar__item"><a href="{% url 'about'%}" >About</a></li>
+                <li class="navbar__item" id="log_button"><a href="{% url 'users:login'%}">Login</a></li>
+            </ul>   
+        </div>
+</nav>
+<!--end of navbar-->
+<div class="contents">
+    <div class="hero__content">
+        <h5>Trade-with-70%-off</h5>
+        <h1>Welcome to <span>E-low</span></h1>
+        <h3>Get your fashion here</h3>
+        <button class='button_one'><a href="{% url 'users:login'%}">Get started</a></button>
+        <button class='button_two'><a href="{% url 'about'%}">About us</a></button>
+    </div>
+</div>
+{% block js%}
+{% endblock%}
+<script src="https://kit.fontawesome.com/b50902bacd.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+body{
+  background-color: rgb(35, 35, 35);
+  box-sizing: border-box;
+}
+body .form_items .error{
+    text-align: center;
+    color: red;
+    margin: 10px 0;
+}
+body .form_items .success{
+    text-align: center;
+    color: lightblue;
+    margin: 10px 0;
+
+}
+body .form_items h1{
+    text-align: center;
+    font-family: cursive;
+    font-size: 3rem;
+    margin:10px 0;
+}
+body form .form_items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    height: 90vh;
+}
+body .txt_field input{
+    background-color: rgb(53, 53, 53) ;
+    color: white;
+    padding:15px 15px;
+    margin: 20px 0;
+    min-width: 300px;
+    outline: none;
+    border-bottom: 2px  solid aquamarine;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    color: #adadad;
+    border-radius: 7px;
+} 
+body .txt_field input:focus{
+    border-bottom: 2px  solid rgb(0, 191, 255);
+}
+body .txt_field label{
+    color: #adadad;
+    pointer-events: none;
+    transition:all 0.5s ease;
+    position: absolute;
+}
+.txt_field input:-webkit-autofill {
+    -webkit-text-fill-color: white !important;
+    background-color: rgb(35, 35, 35) !important;
+    -webkit-box-shadow: 0 0 0px 1000px #2a2a2a inset;
+    box-shadow: 0 0 0px 1000px #2a2a2a inset;
+}
+.submit{
+    background-color: rgb(22, 82, 62);
+    border-radius: 30px;
+    padding: 5px 50px;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    margin: 10px 0;
+    font-family: cursive;
+    font-weight: bold;
+    transition: all 0.35s ease;
+}
+.submit:hover{
+    background-color: rgb(34, 145, 183);
+}
+.signup_link{
+    font-size: 1.2rem;
+}
+.signup_link a{
+    color: aqua;
+}
